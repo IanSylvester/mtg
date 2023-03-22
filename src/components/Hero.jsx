@@ -21,7 +21,9 @@ const Hero = () => {
             I am an aspiring software developer <br className="sm:block hidden" /> currently focusing on 3D visuals, <br className="sm:block hidden" /> user interfaces and web applications.
           </p>
         </div>
+        
       </div>
+      <ComputersCanvas />
     </section>
   );
 };
