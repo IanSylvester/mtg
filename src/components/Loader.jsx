@@ -5,7 +5,7 @@ const Loader = () => {
 
   return (
     <Html>
-      <span classNamed="canvas-loader"></span>
+      <span className="canvas-loader"></span>
       <p
         style={{
           fontSize: 14,
