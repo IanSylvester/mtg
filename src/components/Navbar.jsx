@@ -42,11 +42,17 @@ const Navbar = () => {
               font-medium cursor-pointer`}
               onClick={() => setActive(Link.title)}
             >
+<<<<<<< HEAD
               <a href={`#${Link.id}`}>{Link.title}</a>
+=======
+              <a href={`#${Link.id}`}>{Link.title}
+              </a>
+>>>>>>> ea72f7844856f8b112f4946e076633045350135f
             </li>
           ))}
         </ul>
         <div className="sm:hidden flex flex-1 justify-end items-center">
+<<<<<<< HEAD
           <img
             src={toggle ? close : menu}
             alt="menu"
@@ -75,6 +81,35 @@ const Navbar = () => {
               ))}
             </ul>
           </div>
+=======
+            <img
+             src={toggle ? close : menu}
+             alt="menu"
+             className='w-[28px] h-[28px] object-contain cursor-pointer'
+              onClick={() => setToggle(!toggle)}
+              /> 
+            <div className={`${!toggle ? 'hidden': 'flex'}p-6 black-gradient absolute top-20 right-0 mx-4 my-2 min-w[140px] z-10 rounded-xl`}>
+              <ul className="list-none flex justify-end items-start flex-col gap-4">
+                {navLinks.map((Link) => (
+                  <li
+                   key={Link.id}
+                    className={`${
+                     active === Link.title 
+                    ? "text-white" 
+                    : "text-secondary"
+                } font-poppins font-medium cursor-pointer text-[16px]`}
+                onClick={() => {
+                  setToggle(!toggle);
+                  setActive(Link.title);
+                }}
+              >
+                <a href={`#${Link.id}`}>{Link.title}
+                </a>
+              </li>
+            ))}
+          </ul>
+            </div>
+>>>>>>> ea72f7844856f8b112f4946e076633045350135f
         </div>
       </div>
     </nav>
