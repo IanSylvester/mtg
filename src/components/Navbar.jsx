@@ -2,7 +2,7 @@ import React, {useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 
 import { styles} from '../styles';
-import { NavLinks } from  '..constants';
+import { navLinks } from  '../constants';
 import { slogo, menu, close } from '../assets';
 
 const Navbar = () => {
@@ -23,6 +23,13 @@ const Navbar = () => {
         <img src={slogo} alt="slogo" className="w-9 h-9 object-contain" />
         <p className='text-white text-[18px] font-bold cursor-pointer'>Ian <span className='sm:block hidden'>| Sylvester</span></p>
         </Link>
+        <ul className="list-none hidden sm:flex flex-row gap-10">
+          {navLinks.map((Link) => (
+            <li>
+              <a href={'#${Link.id}'}>{Link.title}</a>
+            </li>
+          ))}
+        </ul>
       </div>    
     </nav>
   )
