@@ -28,7 +28,7 @@ const Navbar = () => {
             className="text-white text-[18px] 
             font-bold cursor-pointer flex"
           >
-            Sylvester
+            Sylvester &nbsp;
             <span className="sm:block hidden">| Portfolio</span>
           </p>
         </Link>
