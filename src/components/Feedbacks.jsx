@@ -30,7 +30,7 @@ const FeedbackCard = ({
             {designation} of {company}
           </p>
         </div>
-        <img 
+        <img
           src={image}
           alt={`feedback-by-${name}`}
           className="w-10 h-10 rounded-full object-cover"
@@ -54,11 +54,7 @@ const Feedbacks = () => {
       </div>
       <div className={`${styles.paddingX} -mt-20 pb-14 flex flex-wrap gap-7`}>
         {testimonials.map((testimonial, index) => (
-          <FeedbackCard
-           key={testimonial.name} 
-           index={index} 
-           {...testimonial} 
-          />
+          <FeedbackCard key={testimonial.name} index={index} {...testimonial} />
         ))}
       </div>
     </div>
