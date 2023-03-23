@@ -30,7 +30,7 @@ const Contact = () => {
       >
         <p className={styles.sectionSubText}>Get in Touch</p>
         <h3 className={styles.sectionHeadText}>Contact</h3>
-        
+
         <form
           ref={formRef}
           onSubmit={handleSubmit}
@@ -78,6 +78,12 @@ const Contact = () => {
               border-none font-medium"
             />
           </label>
+          <button
+            type="submit"
+            className="bg-tertiary py-3 px-8 outline-non w-fit text-white font-bold shadow-md shadow-primary rounded-xl"
+          >
+            {loading ? "Sending..." : "Send"}
+          </button>
         </form>
       </motion.div>
     </div>
